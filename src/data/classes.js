@@ -1,78 +1,137 @@
-import Pilot from '../../assets/imgs/pilot.png';
+import Pilot from '../imgs/pilot.png'
+import Envoy from '../imgs/envoy.png'
+import Mechanic from '../imgs/mechanic.png'
+import Mystic from '../imgs/mystic.png'
+import Operative from '../imgs/operative.png'
+import Solarian from '../imgs/solarian.png'
+import Soldier from '../imgs/soldier.png'
+import Technomancer from '../imgs/technomancer.png'
 
 export const ClassData = [
     {
-        name: "Android",
-        img: Pilot,
-        hp: 4,
-        stats: {
-            str: 0,
-            dex: 2,
-            con: 0,
-            int: 2,
-            wis: 0,
-            cha: -2
-        }
+        name: "Envoy",
+        image: Envoy,
+        hp: 6,
+        stamina: 6,
+        skillRanksMod: 8,
+        skillRanksStat: 'int',
+        classSkills: [
+            "Acrobatics",
+            "Athletics",
+
+        ],
+        proficiencies: [
+            "Light Armor",
+            "Basic Melee Weapons",
+            "Grenades",
+            "Small Arms"
+        ]
     },
     {
-        name: "Human",
-        hp: 4,
-        stats: {
-            str: 0,
-            dex: 0,
-            con: 0,
-            int: 0,
-            wis: 0,
-            cha: 0,
-            // anyStat gives asks the user to apply a bonus to any state. Multiple anyStat means they can apply
-            // multiple bonuses to multiple stats.
-            anyState1: 2,
-            anyStat2: 0,
-        },
-        feats: {
+        name: "Mechanic",
+        image: Mechanic,
+        hp: 6,
+        stamina: 6,
+        skillRanksMod: 4,
+        skillRanksStat: 'int',
+        classSkills: [
+            "Acrobatics",
+            "Athletics",
 
-        }
+        ],
+        proficiencies: [
+            "Light Armor",
+            "Basic Melee Weapons",
+            "Grenades",
+            "Small Arms"
+        ]
     },
     {
-        name: "Lashunta (Korasha)",
-        hp: 4,
-        stats: {
-            str: 2,
-            dex: 0,
-            con: 0,
-            int: 0,
-            wis: -2,
-            cha: 2,
-            // anyStat gives asks the user to apply a bonus to any state. Multiple anyStat means they can apply
-            // multiple bonuses to multiple stats.
-            anyState1: 2,
-            anyStat2: 0,
-        },
-        feats: {
-
-        }
+        name: "Mystic",
+        image: Mystic,
+        hp: 6,
+        stamina: 6,
+        skillRanksMod: 6,
+        skillRanksStat: 'int',
+        classSkills: [
+            "Acrobatics",
+            "Athletics",
+        ],
+        proficiencies: [
+            "Light Armor",
+            "Basic Melee Weapons",
+            "Small Arms"
+        ]
     },
     {
-        name: "Lashunta (Damaya)",
-        hp: 4,
-        stats: {
-            str: 0,
-            dex: 0,
-            con: -2,
-            int: 2,
-            wis: 0,
-            cha: 2,
-            // anyStat gives asks the user to apply a bonus to any state. Multiple anyStat means they can apply
-            // multiple bonuses to multiple stats.
-            anyState1: 2,
-            anyStat2: 0,
-        },
-        feats: {
+        name: "Operative",
+        image: Operative,
+        hp: 6,
+        stamina: 6,
+        skillRanksMod: 8,
+        classSkills: [
+            "Acrobatics",
+            "Athletics",
 
-        },
-        skills: {
-          anySkill1: 2,
-          anySkill2: 2,
-        }
+        ],
+        proficiencies: [
+            "Light Armor",
+            "Basic Melee Weapons",
+            "Small Arms"
+        ]
+    },
+    {
+        name: "Solarian",
+        image: Solarian,
+        hp: 7,
+        stamina: 7,
+        skillRanksMod: 4,
+        classSkills: [
+            "Acrobatics",
+            "Athletics",
+
+        ],
+        proficiencies: [
+            "Light Armor",
+            "Basic Melee Weapons",
+            "Grenades",
+            "Small Arms"
+        ]
+    },
+    {
+        name: "Soldier",
+        image: Soldier,
+        hp: 7,
+        stamina: 7,
+        skillRanksMod: 4,
+        classSkills: [
+            "Acrobatics",
+            "Athletics",
+
+        ],
+        proficiencies: [
+            "Light Armor",
+            "Basic Melee Weapons",
+            "Grenades",
+            "Small Arms"
+        ]
+    },
+    {
+        name: "Technomancer",
+        image: Technomancer,
+        hp: 5,
+        stamina: 5,
+        skillRanksMod: 4,
+        classSkills: [
+            "Acrobatics",
+            "Athletics",
+
+        ],
+        proficiencies: [
+            "Light Armor",
+            "Basic Melee Weapons",
+            "Grenades",
+            "Small Arms"
+        ]
     },
 ];

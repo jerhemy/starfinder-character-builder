@@ -2,11 +2,8 @@ import React from 'react';
 import { useStateValue } from "../components/StateContext";
 import styled from 'styled-components';
 import {CardList} from "../components/CardList";
-import { ClassData } from "../data/classes";
-
-const RaceContainer = styled.div`
-    width: 750px;
-`;
+import {RaceData} from "../data/races";
+import {CardContainer} from "../components/styles";
 
 
 export const Race = (props) => {
@@ -14,8 +11,8 @@ export const Race = (props) => {
     const items = ["Android","Human","Kasathas","Lashuntas","Shirrens","Vesk","Ysoki"];
 
     return (
-        <RaceContainer>
-            <CardList items={ClassData} />
-        </RaceContainer>
+        <CardContainer>
+            <CardList items={RaceData} />
+        </CardContainer>
     )
 };

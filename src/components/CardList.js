@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+
 export const Card = styled.div`
   position: relative;
   width: 100%;
@@ -24,7 +25,11 @@ export const Face = styled.div`
   background-color: #ecf0f1;
   border: 2px white solid;
   border-radius: 5px;
-  background-image: url(${props=>props.img})
+  
+  display: flex;
+  margin: auto 0;
+  justify-content: center;
+  overflow: hidden;
 `;
 
 export const Label = styled.span`
@@ -60,7 +65,7 @@ export const Item = styled.li`
   }
 `;
 
-export const CardContainer = styled.ul`
+const CardContainer = styled.ul`
     padding-left: 0px;
 `;
 
@@ -72,7 +77,8 @@ export const CardList = ({items, onClick}) => {
                 return (
                     <Item index={i} key={i} onClick={() => { onClick(item) } }>
                         <Card>
-                            <Face img={item.img}>
+                            <Face>
+                                <img src={item.image} style={{height: 400,marginTop: 10}}/>
                                 <Label>{item.name}</Label>
                             </Face>
                         </Card>
