@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-
+import {useStateValue} from "./StateContext";
 
 export const Card = styled.div`
   position: relative;
@@ -13,6 +13,11 @@ export const Card = styled.div`
   box-shadow: 4px 4px 20px rgba(0,0,0,0.4);
   margin: 5px;
   cursor: pointer;
+  
+  &.active {
+    box-shadow: 0px 0px 30px rgba(255,255,255,1);
+    border-radius: 0px
+  }
 `;
 
 export const Face = styled.div`
@@ -22,7 +27,7 @@ export const Face = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #ecf0f1;
+  background-color: #143e93;
   border: 2px white solid;
   border-radius: 5px;
   
@@ -33,11 +38,12 @@ export const Face = styled.div`
 `;
 
 export const Label = styled.span`
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 12px;
-  color: #2980b9;
+    font-family: 'AxionSSF';     
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    color: #fff;
 `;
 
 export const Item = styled.li`
@@ -69,16 +75,22 @@ const CardContainer = styled.ul`
     padding-left: 0px;
 `;
 
+export const CardHeader = styled.h3`
+font-family: 'AxionSSF'; 
+    margin-left: 15px;
+`;
+
 export const CardList = ({items, onClick}) => {
+    const [selectedCard, setSelectedCard] = useState(null);
 
     return (
         <CardContainer>
             {items.map((item, i) => {
                 return (
-                    <Item index={i} key={i} onClick={() => { onClick(item) } }>
-                        <Card>
+                    <Item index={i} key={i} onClick={() => { setSelectedCard(i); onClick(item); } }>
+                        <Card className={ i === selectedCard ? 'active' : 'inactive'}>
                             <Face>
-                                <img src={item.image} style={{height: 400,marginTop: 10}}/>
+                                <img alt={item.name}  src={item.image} style={{height: 400,marginTop: 10}}/>
                                 <Label>{item.name}</Label>
                             </Face>
                         </Card>

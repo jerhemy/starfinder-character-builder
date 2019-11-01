@@ -1,4 +1,3 @@
-import Pilot from '../imgs/pilot.png'
 import Envoy from '../imgs/envoy.png'
 import Mechanic from '../imgs/mechanic.png'
 import Mystic from '../imgs/mystic.png'

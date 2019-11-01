@@ -1,5 +1,4 @@
 import React from 'react';
-import { useStateValue } from "../components/StateContext";
 import styled from 'styled-components';
 
 const RaceContainer = styled.div`
@@ -7,8 +6,6 @@ const RaceContainer = styled.div`
 `;
 
 const Skills = (props) => {
-    const [state, dispatch] = useStateValue();
-
     return (
         <RaceContainer>
             <h3>Choose a Skill:</h3>

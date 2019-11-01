@@ -1,23 +1,27 @@
-import React from 'react';
-import styled from "styled-components";
-import {CardList} from "../components/CardList";
+import React, { useState } from 'react';
+import {CardList, CardHeader} from "../components/CardList";
 import {ClassData} from "../data/classes";
-import {CardContainer} from "../components/styles";
-
-
-const ClassContainer = styled.div`
-    width: 750px;
-    margin: 0 auto;
-`;
-
+import {CardContainer, InfoContainer, TwoPanelContainer} from "../components/styles";
+import {RaceData} from "../data/races";
+import {Header} from "../components/Header";
 
 export const Class = (props) => {
+    const [selectedItem, setSelectedItem] = useState({});
 
+    const classSelected = (item) => {
+        setSelectedItem(item);
+    };
 
     return (
-        <CardContainer>
-            <h3>Choose a Class:</h3>
-            <CardList items={ClassData} />
-        </CardContainer>
+        <TwoPanelContainer>
+            <CardContainer>
+                <CardHeader>Select a Race</CardHeader>
+                <CardList items={ClassData} onClick={classSelected}/>
+            </CardContainer>
+            <InfoContainer>
+                <Header color={'red'}>{selectedItem.name}</Header>
+                <span>{selectedItem.description}</span>
+            </InfoContainer>
+        </TwoPanelContainer>
     )
 };

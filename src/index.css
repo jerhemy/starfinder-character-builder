@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "AxionSSF";
+  src: url("//db.onlinewebfonts.com/t/a4196aa4eb00d29a890aa1bb2123d9be.eot");
+  src: url("//db.onlinewebfonts.com/t/a4196aa4eb00d29a890aa1bb2123d9be.eot?#iefix") format("embedded-opentype"),
+  url("//db.onlinewebfonts.com/t/a4196aa4eb00d29a890aa1bb2123d9be.woff2") format("woff2"),
+  url("//db.onlinewebfonts.com/t/a4196aa4eb00d29a890aa1bb2123d9be.woff") format("woff"),
+  url("//db.onlinewebfonts.com/t/a4196aa4eb00d29a890aa1bb2123d9be.ttf") format("truetype"),
+  url("//db.onlinewebfonts.com/t/a4196aa4eb00d29a890aa1bb2123d9be.svg#AxionSSFW01-Regular") format("svg");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +15,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #092450;
+  color: #fff;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+

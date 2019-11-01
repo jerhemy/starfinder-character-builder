@@ -1,12 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { StateProvider } from './components/StateContext';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import {Race} from "./pages/Race";
 import {Class} from "./pages/Class";
@@ -35,7 +33,7 @@ function App() {
   return (
     <Router>
         <NavBar />
-        <StateProvider initialState={{}} reducer={reducer}>
+        <StateProvider initialState={initialState} reducer={reducer}>
           <Switch>
             <Route path="/race">
               <Race />

@@ -1,18 +1,36 @@
-import React from 'react';
-import { useStateValue } from "../components/StateContext";
+import React, {useState} from 'react';
 import styled from 'styled-components';
-import {CardList} from "../components/CardList";
+import {Card, CardHeader, CardList, Face, Item, Label} from "../components/CardList";
 import {RaceData} from "../data/races";
-import {CardContainer} from "../components/styles";
-
+import {CardContainer, InfoContainer, TwoPanelContainer} from "../components/styles";
+import {Header} from "../components/Header";
+import {InfoBlock} from "../components/InfoBlock";
 
 export const Race = (props) => {
-    const [state, dispatch] = useStateValue();
-    const items = ["Android","Human","Kasathas","Lashuntas","Shirrens","Vesk","Ysoki"];
+    const [selectedItem, setSelectedItem] = useState({name: '', description: '', details: []});
+
+    const raceSelected = (race) => {
+        setSelectedItem(race);
+    };
 
     return (
-        <CardContainer>
-            <CardList items={RaceData} />
-        </CardContainer>
+        <TwoPanelContainer>
+            <CardContainer>
+                <CardHeader>Select a Race</CardHeader>
+                <CardList items={RaceData} onClick={raceSelected}/>
+            </CardContainer>
+            {selectedItem.details && (
+            <InfoContainer>
+                    <Header color={'red'}>{selectedItem.name}</Header>
+                    <span>{selectedItem.description}</span>
+                    {selectedItem.details.map((item, i) => {
+                        return (
+                            <InfoBlock name={item.title} description={item.description} />
+                        )
+                    })}
+
+            </InfoContainer>
+        )}
+        </TwoPanelContainer>
     )
 };
