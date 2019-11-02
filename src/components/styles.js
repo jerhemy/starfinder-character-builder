@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 export const CardContainer = styled.div`
-    width: 750px;
+    width: 500px;
+    flex-grow: 1;
 `;
 export const InfoContainer = styled.div`
-    width: 100%;
+    width: 600px;
+    flex-grow: 1;
 `;
 
 export const TwoPanelContainer = styled.div`

@@ -1,8 +1,11 @@
 import React from 'react';
+import AndroidImage from '../assets/images/race_android.png';
+import HumanImage from '../assets/images/race_human.png';
 
 export const RaceData = [
     {
         name: "Android",
+        image: AndroidImage,
         description: `Complex technological creations crafted to resemble humans, androids were originally a servitor 
         race, but they have since broken free to form their own society. Unlike ordinary robots or ship AIs, androids 
         do not simply respond according to their programming; rather, they have independent consciousnesses and are 
@@ -49,6 +52,7 @@ export const RaceData = [
     },
     {
         name: "Human",
+        image: HumanImage,
         description: `Ambitious, creative, and endlessly curious, humans have shown more drive to explore their system 
         and the universe beyond than any of their neighbor races—for better and for worse. They’ve helped usher in a 
         new era of system-wide communication and organization and are admired for their passion and tenacity, but their 
@@ -58,7 +62,15 @@ export const RaceData = [
             {
                 title: 'Size and Type',
                 description: `Humans are Medium humanoids and have the human subtype.`
-            }
+            },
+            {
+                title: 'Bonus Feat',
+                description: `Humans are Medium humanoids and have the human subtype.`
+            },
+            {
+                title: 'Skilled',
+                description: `Humans are Medium humanoids and have the human subtype.`
+            },
         ],
         hp: 4,
         stats: {
@@ -79,12 +91,31 @@ export const RaceData = [
     },
     {
         name: "Kasathas",
+        description: `Originally from a planet orbiting a dying star, the four-armed kasathas maintain a reputation as 
+        a noble and mysterious people. They are famous for their anachronistic warriors, ancient wisdom, and strange 
+        traditions.`,
         hp: 4,
         details: [
             {
                 title: 'Size and Type',
                 description: `Humans are Medium humanoids and have the human subtype.`
-            }
+            },
+            {
+                title: 'Desert Stride',
+                description: `Humans are Medium humanoids and have the human subtype.`
+            },
+            {
+                title: 'Four-Armed',
+                description: `Humans are Medium humanoids and have the human subtype.`
+            },
+            {
+                title: 'Historian',
+                description: `Humans are Medium humanoids and have the human subtype.`
+            },
+            {
+                title: 'Natural Grace',
+                description: `Humans are Medium humanoids and have the human subtype.`
+            },
         ],
         stats: {
             str: 2,
@@ -157,7 +188,7 @@ export const RaceData = [
                 title: 'Dimorphic',
                 description: <>
                     All lashuntas gain +2 Charisma at character creation. <br/>
-                    Damaya lashuntas are typically clever and well-spoken (+2 Intelligence at character creation) but 
+                    Damaya lashuntas are typically clever and well-spoken (+2 Intelligence at character creation) but
                     somewhat delicate (–2 Constitution at character creation).
                 </>
             }
@@ -184,6 +215,9 @@ export const RaceData = [
     },
     {
         name: "Shirrens",
+        description: `Once part of a ravenous hive of locust-like predators, the insectile shirrens only recently broke 
+        with their hive mind to become a race of telepaths physically addicted to their own individualism, yet 
+        dedicated to the idea of community and harmony with other races.`,
         hp: 6,
         stats: {
             str: 0,
@@ -225,7 +259,199 @@ export const RaceData = [
     },
     {
         name: "Ysoki",
-        description: "Small and furtive, the ysoki are often overlooked by larger races. Yet through wit and technological prowess, they’ve spread throughout the solar system, giving truth to the old adage that every starship needs a few rats.",
+        description: `Small and furtive, the ysoki are often overlooked by larger races. Yet through wit and 
+        technological prowess, they’ve spread throughout the solar system, giving truth to the old adage that every 
+        starship needs a few rats.`,
+        hp: 2,
+        stats: {
+            str: -2,
+            dex: 2,
+            con: 0,
+            int: 2,
+            wis: 0,
+            cha: 0,
+        },
+        details: [
+            {
+                title: 'Size and Type',
+                description: `Lashuntas are Medium humanoids with the lashunta subtype.`
+            },
+            {
+                title: 'Dimorphic',
+                description: <>
+                    All lashuntas gain +2 Charisma at character creation. <br/>
+                    Damaya lashuntas are typically clever and well-spoken (+2 Intelligence at character creation) but
+                    somewhat delicate (–2 Constitution at character creation).
+                </>
+            }
+        ],
+        feats: {
+
+        },
+        skills: {
+
+        }
+    },
+    {
+        name: "Dwarf",
+        source: `Legacy Races`,
+        description: `Dwarves are a stocky race, roughly a foot shorter than humans, with broad, heavy frames. 
+            Dwarves trace their heritage to the missing planet of Golarion, yet for them, this is not merely a matter of 
+            , but identity—they were forged in the furnace of Golarion’s subterranean passages, and many dwarves born 
+            long after the planet’s disappearance still feel the sting of its loss, kept alive in dwarven song and legend.`,
+        hp: 6,
+        stats: {
+        str: 0,
+            dex: 0,
+            con: 2,
+            int: 0,
+            wis: 2,
+            cha: -2,
+    },
+        details: [
+            {
+                title: 'Size and Type',
+                description: <>Dwarves are Medium humanoids with the dwarf subtype.</>
+            },
+            {
+                title: 'Darkvision',
+                description: <>Dwarves are Medium humanoids with the dwarf subtype.</>
+            },
+            {
+                title: 'Slow but Steady',
+                description: `Dwarves have a land speed of 20 feet, which is never modified when they are encumbered or 
+                wearing heavy armor. They also gain a +2 racial bonus to saving throws against poisons, spells, and 
+                spell-like abilities, and when standing on the ground they gain a +4 racial bonus to their KAC against 
+                 rush and trip combat maneuvers.`
+            },
+            {
+                title: 'Stonecunning',
+                description: `Dwarves gain a +2 bonus to Perception checks to notice unusual stonework, such as traps
+                and hidden doors located in stone walls or floors. They receive a check to notice such features whenever 
+                they pass within 10 feet of them, whether or not they are actively looking.`
+            },
+            {
+                title: 'Traditional Enemies',
+                description: `Dwarves still train to fight their ancient enemies. A dwarf gains a +1 racial bonus to 
+                attack rolls against a creature with the goblinoid or orc subtype and a +4 racial bonus to AC against 
+                an attack from a creature with the giant subtype.`
+            },
+            {
+                title: 'Weapon Familiarity',
+                description: `Dwarves are proficient with basic and advanced melee weapons and gain specialization with 
+                those weapons at 3rd level.`
+            },
+        ],
+        feats: {
+
+        },
+        skills: {
+
+        }
+    },
+    {
+        name: "Elf",
+        description: `Small and furtive, the ysoki are often overlooked by larger races. Yet through wit and 
+        technological prowess, they’ve spread throughout the solar system, giving truth to the old adage that every 
+        starship needs a few rats.`,
+        hp: 2,
+        stats: {
+            str: -2,
+            dex: 2,
+            con: 0,
+            int: 2,
+            wis: 0,
+            cha: 0,
+        },
+        details: [
+            {
+                title: 'Size and Type',
+                description: `Lashuntas are Medium humanoids with the lashunta subtype.`
+            },
+            {
+                title: 'Dimorphic',
+                description: <>
+                    All lashuntas gain +2 Charisma at character creation. <br/>
+                    Damaya lashuntas are typically clever and well-spoken (+2 Intelligence at character creation) but
+                    somewhat delicate (–2 Constitution at character creation).
+                </>
+            }
+        ],
+        feats: {
+
+        },
+        skills: {
+
+        }
+    },
+    {
+        name: "Gnome",
+        description: `Small and furtive, the ysoki are often overlooked by larger races. Yet through wit and 
+        technological prowess, they’ve spread throughout the solar system, giving truth to the old adage that every 
+        starship needs a few rats.`,
+        hp: 2,
+        stats: {
+            str: -2,
+            dex: 2,
+            con: 0,
+            int: 2,
+            wis: 0,
+            cha: 0,
+        },
+        feats: {
+
+        },
+        skills: {
+
+        }
+    },
+    {
+        name: "Half-Elf",
+        description: `Small and furtive, the ysoki are often overlooked by larger races. Yet through wit and 
+        technological prowess, they’ve spread throughout the solar system, giving truth to the old adage that every 
+        starship needs a few rats.`,
+        hp: 2,
+        stats: {
+            str: -2,
+            dex: 2,
+            con: 0,
+            int: 2,
+            wis: 0,
+            cha: 0,
+        },
+        feats: {
+
+        },
+        skills: {
+
+        }
+    },
+    {
+        name: "Half-Orc",
+        description: `Small and furtive, the ysoki are often overlooked by larger races. Yet through wit and 
+        technological prowess, they’ve spread throughout the solar system, giving truth to the old adage that every 
+        starship needs a few rats.`,
+        hp: 2,
+        stats: {
+            str: -2,
+            dex: 2,
+            con: 0,
+            int: 2,
+            wis: 0,
+            cha: 0,
+        },
+        feats: {
+
+        },
+        skills: {
+
+        }
+    },
+    {
+        name: "Halfling",
+        description: `Small and furtive, the ysoki are often overlooked by larger races. Yet through wit and 
+        technological prowess, they’ve spread throughout the solar system, giving truth to the old adage that every 
+        starship needs a few rats.`,
         hp: 2,
         stats: {
             str: -2,

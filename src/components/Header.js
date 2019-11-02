@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import RedHeader from '../imgs/red-header.png'
-import BlueHeader from '../imgs/red-header.png'
+import RedHeader from '../assets/images/header-red.png'
+import BlueHeader from '../assets/images/header-blue.png'
 
 const Container = styled.div`
     display:flex;
@@ -20,9 +20,9 @@ const HeaderText = styled.span`
     text-transform: uppercase;
 `;
 
-export const Header = ({children}) => {
+export const Header = ({color, children}) => {
     return (
-        <Container style={{width: 300, height:30}}>
+        <Container color={color} style={{width: 300, height:30}}>
             <HeaderText>{children}</HeaderText>
         </Container>
     )

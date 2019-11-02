@@ -1,4 +1,4 @@
-import Pilot from "../imgs/pilot.png";
+import Pilot from "../assets/images/pilot.png";
 
 export const ThemeData = [
     {

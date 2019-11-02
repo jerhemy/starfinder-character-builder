@@ -44,16 +44,13 @@ const ClassName = styled.div`
     font-size: 1.4em;  
 `;
 
-export const ClassHeader = ({item}) => {
+export const RaceHeader = ({item}) => {
     return (
         <BarContainer>
             <Container color={'blue'} style={{zIndex: 10}}>
                 <ClassName>{item.name}</ClassName>
             </Container>
-            <ColumnContainer color={'red'} style={{marginLeft: -75, zIndex: 5}}>
-                <HeaderText style={{fontSize: `1em`, marginLeft: 85}}>STAMINA POINTS</HeaderText>
-                <HeaderText style={{fontSize: `.8em`, marginLeft: 85, marginTop: -5}}>{item.stamina} + Constitution modifier</HeaderText>
-            </ColumnContainer>
+
             <ColumnContainer color={'blue'} style={{flexDirection: `column`, marginRight: 90, marginLeft: -210}}>
                 <HeaderText style={{fontSize: `1.4em`, paddingLeft: 195}}> {item.hp} HP</HeaderText>
             </ColumnContainer>

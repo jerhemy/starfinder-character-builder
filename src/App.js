@@ -32,8 +32,8 @@ const reducer = (state, action) => {
 function App() {
   return (
     <Router>
-        <NavBar />
         <StateProvider initialState={initialState} reducer={reducer}>
+          <NavBar />
           <Switch>
             <Route path="/race">
               <Race />

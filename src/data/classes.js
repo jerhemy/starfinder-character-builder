@@ -1,10 +1,10 @@
-import Envoy from '../imgs/envoy.png'
-import Mechanic from '../imgs/mechanic.png'
-import Mystic from '../imgs/mystic.png'
-import Operative from '../imgs/operative.png'
-import Solarian from '../imgs/solarian.png'
-import Soldier from '../imgs/soldier.png'
-import Technomancer from '../imgs/technomancer.png'
+import Envoy from '../assets/images/envoy.png'
+import Mechanic from '../assets/images/mechanic.png'
+import Mystic from '../assets/images/mystic.png'
+import Operative from '../assets/images/operative.png'
+import Solarian from '../assets/images/solarian.png'
+import Soldier from '../assets/images/soldier.png'
+import Technomancer from '../assets/images/technomancer.png'
 
 export const ClassData = [
     {

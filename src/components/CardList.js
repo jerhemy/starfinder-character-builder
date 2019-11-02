@@ -9,7 +9,7 @@ export const Card = styled.div`
   height: 100%;
   transform-style: preserve-3d;
   transform: rotatey(0deg) translatex(0px) translatey(0px);
-  transition: all 0.6s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  /*transition: all 0.6s cubic-bezier(0.680, -0.550, 0.265, 1.550);*/
   box-shadow: 4px 4px 20px rgba(0,0,0,0.4);
   margin: 5px;
   cursor: pointer;
@@ -55,8 +55,8 @@ export const Item = styled.li`
 
   padding: 5px;
   margin: 5px;
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   display: inline-block;
   
   @keyframes animateIn {
@@ -90,7 +90,7 @@ export const CardList = ({items, onClick}) => {
                     <Item index={i} key={i} onClick={() => { setSelectedCard(i); onClick(item); } }>
                         <Card className={ i === selectedCard ? 'active' : 'inactive'}>
                             <Face>
-                                <img alt={item.name}  src={item.image} style={{height: 400,marginTop: 10}}/>
+                                <img src={item.image} style={{height: 400,marginTop: 10}}/>
                                 <Label>{item.name}</Label>
                             </Face>
                         </Card>

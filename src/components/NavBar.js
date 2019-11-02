@@ -12,7 +12,7 @@ const NavList = styled.ul`
 
 const NavItem = styled.li`
     float: left;
-    
+    font-family: 'AxionSSF';
     a {
         display: block;
         color: white;
