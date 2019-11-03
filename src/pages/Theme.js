@@ -1,12 +1,16 @@
 import React from 'react';
-import {CardContainer} from "../components/styles";
-import {CardList} from "../components/CardList";
+import {CardContainer, TwoPanelContainer} from "../components/styles";
+import {CardHeader, CardList} from "../components/CardList";
 import {ThemeData} from "../data/themes";
+import {RaceData} from "../data/races";
 
 export const Theme = (props) => {
     return (
-        <CardContainer>
-            <CardList items={ThemeData} />
-        </CardContainer>
+        <TwoPanelContainer>
+            <CardContainer>
+                <CardHeader>Select a Theme</CardHeader>
+                <CardList items={ThemeData} />
+            </CardContainer>
+        </TwoPanelContainer>
     )
 };

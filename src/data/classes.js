@@ -8,6 +8,7 @@ import Technomancer from '../assets/images/technomancer.png'
 
 export const ClassData = [
     {
+        id: 1,
         name: "Envoy",
         image: Envoy,
         hp: 6,
@@ -52,6 +53,11 @@ export const ClassData = [
         stamina: 6,
         skillRanksMod: 6,
         skillRanksStat: 'int',
+        keyAbility: `Your Wisdom determines your spellcasting ability, the saving throw DCs of your spells, and the 
+        number of bonus spells you can cast per day, so Wisdom is your key ability score. A high Charisma score can 
+        also help you in social situations.`,
+        classSkillMod: 6,
+        classSkillStat: `int`,
         classSkills: [
             "Acrobatics",
             "Athletics",

@@ -4,10 +4,9 @@ import {ClassData} from "../data/classes";
 import {CardContainer, InfoContainer, TwoPanelContainer} from "../components/styles";
 import {RaceData} from "../data/races";
 import {Header} from "../components/Header";
-import {ClassHeader} from "../components/ClassHeader";
 
 export const Class = (props) => {
-    const [selectedItem, setSelectedItem] = useState();
+    const [selectedItem, setSelectedItem] = useState({});
 
     const classSelected = (item) => {
         setSelectedItem(item);
@@ -16,15 +15,13 @@ export const Class = (props) => {
     return (
         <TwoPanelContainer>
             <CardContainer>
-                <CardHeader>Select a Class</CardHeader>
+                <CardHeader>Select a Race</CardHeader>
                 <CardList items={ClassData} onClick={classSelected}/>
             </CardContainer>
-            { selectedItem && (
             <InfoContainer>
-                <ClassHeader color={'blue'} item={selectedItem}></ClassHeader>
+                <Header color={'red'}>{selectedItem.name}</Header>
                 <span>{selectedItem.description}</span>
             </InfoContainer>
-            )}
         </TwoPanelContainer>
     )
 };

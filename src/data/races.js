@@ -98,23 +98,27 @@ export const RaceData = [
         details: [
             {
                 title: 'Size and Type',
-                description: `Humans are Medium humanoids and have the human subtype.`
+                description: `Kasathas are Medium humanoids with the kasatha subtype.`
             },
             {
                 title: 'Desert Stride',
-                description: `Humans are Medium humanoids and have the human subtype.`
+                description: `Kasathas can move through nonmagical difficult terrain in deserts, hills, and mountains at 
+                their normal speed.`
             },
             {
                 title: 'Four-Armed',
-                description: `Humans are Medium humanoids and have the human subtype.`
+                description: `Kasathas have four arms, which allows them to wield and hold up to four hands’ worth of 
+                weapons and equipment. While their multiple arms increase the number of items they can have at the 
+                ready, it doesn't increase the number of attacks they can make during combat.`
             },
             {
                 title: 'Historian',
-                description: `Humans are Medium humanoids and have the human subtype.`
+                description: `Due to their in-depth historical training and the wide-ranging academic background 
+                knowledge they possess, kasathas receive a +2 racial bonus to Culture checks.`
             },
             {
                 title: 'Natural Grace',
-                description: `Humans are Medium humanoids and have the human subtype.`
+                description: `Kasathas receive a +2 racial bonus to Acrobatics and Athletics checks.`
             },
         ],
         stats: {
@@ -138,43 +142,7 @@ export const RaceData = [
         }
     },
     {
-        name: "Lashunta (Korasha)",
-        description: `Idealized by many other humanoid races and gifted with innate psychic abilities, lashuntas are at 
-         consummate scholars and enlightened warriors, naturally divided into two specialized subraces with different 
-         abilities and societal roles.`,
-        details: [
-            {
-                title: 'Size and Type',
-                description: `Lashuntas are Medium humanoids with the lashunta subtype.`
-            },
-            {
-                title: 'Dimorphic',
-                description: <>
-                    All lashuntas gain +2 Charisma at character creation. <br/>
-                    Korasha lashuntas are muscular (+2 Strength at character creation) but often brash and unobservant (–2 Wisdom at character creation).
-                </>
-
-            }
-        ],
-        hp: 4,
-        stats: {
-            str: 2,
-            dex: 0,
-            con: 0,
-            int: 0,
-            wis: -2,
-            cha: 2,
-            // anyStat gives asks the user to apply a bonus to any state. Multiple anyStat means they can apply
-            // multiple bonuses to multiple stats.
-            anyState1: 2,
-            anyStat2: 0,
-        },
-        feats: {
-
-        }
-    },
-    {
-        name: "Lashunta (Damaya)",
+        name: "Lashunta",
         hp: 4,
         description: `Idealized by many other humanoid races and gifted with innate psychic abilities, lashuntas are at 
          consummate scholars and enlightened warriors, naturally divided into two specialized subraces with different 
@@ -186,11 +154,30 @@ export const RaceData = [
             },
             {
                 title: 'Dimorphic',
+                description: `All lashuntas gain +2 Charisma at character creation.  Korasha lashuntas are muscular 
+                (+2 Strength at character creation) but often brash and unobservant (–2 Wisdom at character creation).
+                Damaya lashuntas are typically clever and well-spoken (+2 Intelligence at character creation) but 
+                somewhat delicate (–2 Constitution at character creation).`
+            },
+            {
+                title: 'Lashunta Magic',
                 description: <>
-                    All lashuntas gain +2 Charisma at character creation. <br/>
-                    Damaya lashuntas are typically clever and well-spoken (+2 Intelligence at character creation) but
-                    somewhat delicate (–2 Constitution at character creation).
+                    Lashuntas gain the following spell-like abilities:<br/>
+                    <b>   At will:</b> daze, psychokinetic hand<br/>
+                    <b>   1/day:</b> detect thoughts<br/>
+                    See Spell-like Abilities on page 262. The caster level for these effects is equal to the lashunta's level.
                 </>
+            },
+            {
+                title: 'Limited Telepathy',
+                description: `Lashuntas can mentally communicate with any creatures within 30 feet with whom they share 
+                a language. Conversing telepathically with multiple creatures simultaneously is just as difficult as 
+                listening to multiple people speaking.`
+            },
+            {
+                title: 'Student',
+                description: `Lashuntas love to learn, and they receive a +2 racial bonus to any two skills of their 
+                choice.`
             }
         ],
         stats: {
@@ -200,10 +187,6 @@ export const RaceData = [
             int: 2,
             wis: 0,
             cha: 2,
-            // anyStat gives asks the user to apply a bonus to any state. Multiple anyStat means they can apply
-            // multiple bonuses to multiple stats.
-            anyState1: 2,
-            anyStat2: 0,
         },
         feats: {
 
@@ -211,7 +194,31 @@ export const RaceData = [
         skills: {
           anySkill1: 2,
           anySkill2: 2,
-        }
+        },
+        variants: [
+            {
+                name: "Damaya",
+                stats: {
+                    str: 0,
+                    dex: 0,
+                    con: -2,
+                    int: 2,
+                    wis: 0,
+                    cha: 2,
+                },
+            },
+            {
+                name: "Korasha",
+                stats: {
+                    str: 2,
+                    dex: 0,
+                    con: 0,
+                    int: 0,
+                    wis: -2,
+                    cha: 2,
+                }
+            }
+        ]
     },
     {
         name: "Shirrens",
@@ -274,15 +281,30 @@ export const RaceData = [
         details: [
             {
                 title: 'Size and Type',
-                description: `Lashuntas are Medium humanoids with the lashunta subtype.`
+                description: `Ysoki are Small humanoids with the ysoki subtype.`
             },
             {
-                title: 'Dimorphic',
-                description: <>
-                    All lashuntas gain +2 Charisma at character creation. <br/>
-                    Damaya lashuntas are typically clever and well-spoken (+2 Intelligence at character creation) but
-                    somewhat delicate (–2 Constitution at character creation).
-                </>
+                title: 'Cheek Pouches',
+                description: `Ysoki can store up to 1 cubic foot of items weighing up to 1 bulk in total in their cheek 
+                pouches, and they can transfer a single object between hand and cheek as a swift action. A ysoki can 
+                disgorge the entire contents of his pouch onto the ground in his square as a move action that does not 
+                provoke an attack of opportunity. `
+            },
+            {
+                title: 'Darkvision',
+                description: `Ysoki can see up to 60 feet in the dark. See page 263 for more information. `
+            },
+            {
+                title: 'Moxie',
+                description: `Ysoki are scrappy and nimble even when the odds are against them. A ysoki can stand from 
+                prone as a swift action. Additionally, when off-kilter (see page 276), a ysoki does not take the normal 
+                penalties to attacks or gain the  flat-footed condition. When attempting an Acrobatics check to tumble 
+                through the space of an opponent at least one size category larger than himself, a ysoki receive a +5 
+                racial bonus to the check.`
+            },
+            {
+                title: 'Scrounger',
+                description: `Ysoki receive a +2 racial bonus to Engineering, Stealth, and Survival checks.`
             }
         ],
         feats: {

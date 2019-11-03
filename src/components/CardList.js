@@ -40,8 +40,8 @@ export const Face = styled.div`
 export const Label = styled.span`
     font-family: 'AxionSSF';     
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 5px;
+    left: 5px;
     font-size: 12px;
     color: #fff;
 `;
@@ -80,7 +80,7 @@ font-family: 'AxionSSF';
     margin-left: 15px;
 `;
 
-export const CardList = ({items, onClick}) => {
+export const CardList = ({items, selectedItem, onClick}) => {
     const [selectedCard, setSelectedCard] = useState(null);
 
     return (
@@ -88,7 +88,7 @@ export const CardList = ({items, onClick}) => {
             {items.map((item, i) => {
                 return (
                     <Item index={i} key={i} onClick={() => { setSelectedCard(i); onClick(item); } }>
-                        <Card className={ i === selectedCard ? 'active' : 'inactive'}>
+                        <Card className={ item === selectedItem ? 'active' : 'inactive'}>
                             <Face>
                                 <img src={item.image} style={{height: 400,marginTop: 10}}/>
                                 <Label>{item.name}</Label>
